@@ -1,0 +1,10 @@
+Description:
+    Creates a new model factory.
+    Docs: http://docs.angularjs.org/guide/dev_guide.services.creating_services
+
+Example:
+    yo angular:model thing [--coffee]
+
+    This will create:
+        app/scripts/models/thing.js
+        test/spec/models/thing.js

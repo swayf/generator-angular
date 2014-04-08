@@ -1,7 +1,7 @@
 'use strict'
 
 angular.module('<%= scriptAppName %>')
-  .provider '<%= cameledName %>', [->
+.provider '<%= cameledName %>', ()->
 
     # Private variables
     salutation = 'Hello'
@@ -12,10 +12,9 @@ angular.module('<%= scriptAppName %>')
         salutation
 
     # Public API for configuration
-    @setSalutation = (s) ->
-      salutation = s
+    setSalutation: (s) ->
+        salutation = s
 
     # Method for instantiating
-    @$get = ->
-      new Greeter()
-  ]
+    $get: () ->
+        new Greeter()
