@@ -1,12 +1,17 @@
 'use strict'
 
 angular.module('<%= scriptAppName %>')
-.factory '<%= cameledName %>', ->
-    # Service logic
-    # ...
+.factory '<%= cameledName %>', (Model) ->
 
-    meaningOfLife = 42
+    # schema description
+    <%= cameledName %>Schema =
+        name:                       'product_type'
+        fields:
+            name:
+                type:               'string'
+                validate:
+                    required:       true
 
-    # Public API here
-    someMethod: ->
-        meaningOfLife
+
+    # return registered Model
+    return Model.register <%= cameledName %>Schema
